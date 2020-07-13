@@ -1,3 +1,44 @@
 <resources>
-    <string name="app_name">PATIENT</string>
+    <string name="app_name">Suivi Patient</string>
+    <string name="connection">Connection</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="connect">Connect</string>
+    <string name="sign_in">Sign_in</string>
+    <string name="appointment">Appointment</string>
+    <string name="consultation">Consultation</string>
+    <string name="help">Help</string>
+    <string name="cancel">Cancel</string>
+    <string name="inscription">Inscription</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="email">Mail</string>
+    <string name="phone">Phone</string>
+    <string name="adresse">Adresse</string>
+    <string name="save">Save</string>
+    <string name="error_fields">Required Fields</string>
+    <string name="error_parameters">Credentials error</string>
+    <string name="error_connection">Connection error</string>
+    <string name="welcome">Welcome</string>
+    <string name="wait">Please wait</string>
+    <string name="success_save">Success</string>
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="localisation">Localisation</string>
+    <string name="profil">Profil</string>
+    <string name="others">Others</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
