@@ -64,4 +64,7 @@
         <item>Diabete</item>
         <item>Rhum</item>
     </string-array>
+
+
+    <string name="pick_time">pick_time</string>
 </resources>
