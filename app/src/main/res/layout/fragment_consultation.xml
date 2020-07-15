@@ -1,15 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ConsultationFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/consultation"
-        android:textSize="@dimen/size_top"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/size_top">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/consultation"
+            android:textSize="30dp"
+            android:gravity="center">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtmatricule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/matricule"
+            android:ems="20">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtmaladie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/maladie"
+            android:ems="20">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/detail_maladie"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date"
+            android:ems="20">
+
+        </EditText>
+
+        <Button
+            android:background="@color/colorBlueAccent"
+            android:id="@+id/btnSave"
+            android:text="@string/save"
+            android:layout_marginTop="@dimen/size_top"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            >
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -4,12 +4,7 @@
     <item
         android:id="@+id/menuHome"
         android:title="@string/home"
-        android:icon="@drawable/hospital" />
-
-    <item
-        android:id="@+id/menuLocalisation"
-        android:title="@string/localisation"
-        android:icon="@drawable/about" />
+        android:icon="@drawable/home" />
 
     <item
         android:id="@+id/menuProfil"
@@ -24,12 +19,8 @@
     <item
         android:id="@+id/menuAppointment"
         android:title="@string/appointment"
-        android:icon="@drawable/stethoscope" />
+        android:icon="@drawable/hospital" />
 
-    <item
-        android:id="@+id/menuOthers"
-        android:title="@string/others"
-        android:icon="@drawable/lock" />
 
     <item android:title="@string/others">
         <menu>
@@ -38,6 +29,11 @@
                 android:id="@+id/menuSettings"
                 android:title="@string/action_settings"
                 android:icon="@drawable/settings" />
+            <item
+                android:id="@+id/menuLocalisation"
+                android:title="@string/localisation"
+                android:icon="@drawable/gps" />
+
             <item
                 android:id="@+id/menuHelp"
                 android:title="@string/help"

@@ -1,16 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RendezVousFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/appointment"
-        android:textSize="@dimen/size_top"/>
+    <LinearLayout
+        android:padding="@dimen/size_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/appointment"
+            android:textSize="30dp"
+            android:gravity="center">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:ems="20"
+            android:inputType="textEmailAddress">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date"
+            android:ems="20"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/txttime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/time"
+            android:ems="20"
+            android:inputType="time" />
 
 
-</FrameLayout>
+        <TextView
+            android:textColor="@color/colorBlueDark"
+            android:layout_margin="@dimen/size_all"
+            android:textSize="@dimen/size_title"
+            android:text="@string/motif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:textStyle="italic"
+            android:layout_marginLeft="@dimen/size_middle"
+            android:layout_marginTop="@dimen/size_top"
+            android:text="@string/visite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+
+        <CheckBox
+            android:id="@+id/cbMaster"
+            android:textStyle="italic"
+            android:layout_marginLeft="@dimen/size_middle"
+            android:layout_marginTop="@dimen/size_top"
+            android:text="@string/control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+
+        <Button
+            android:background="@color/colorBlueAccent"
+            android:id="@+id/btnSave"
+            android:text="@string/save"
+            android:layout_marginTop="@dimen/size_top"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            >
+
+        </Button>
+
+
+    </LinearLayout>
+
+</ScrollView>
