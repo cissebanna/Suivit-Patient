@@ -3,7 +3,9 @@ package com.example.patient;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,20 +22,22 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private Button BtnLocalisation;
+    private Button btnNavLocalisation;
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater,@Nullable ViewGroup container,@Nullable
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        BtnLocalisation  = (Button) view.findViewById(R.id.btnlocalisation);
+        btnNavLocalisation = (Button) view.findViewById(R.id.btnlocalisation);
 
-        BtnLocalisation.setOnClickListener(new View.OnClickListener() {
+        btnNavLocalisation.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MapsActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.navHostFragment , new MapsActivity());
+                fragmentTransaction.commit();
             }
         });
 
