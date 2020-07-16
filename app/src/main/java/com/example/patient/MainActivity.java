@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.Navigation;
@@ -47,5 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(destination.getLabel());
             }
         });
+
+
+        //action sur le button localisation
+        FragmentTransaction fragmentTransaction =  getSupportFragmentManager().beginTransaction();
+
+        fragmentTransaction.add(R.id.navHostFragment , new ProfilFragment());
+
+        fragmentTransaction.commit();
     }
 }
