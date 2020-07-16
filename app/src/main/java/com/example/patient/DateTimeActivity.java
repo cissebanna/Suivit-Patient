@@ -19,18 +19,18 @@ public class DateTimeActivity extends AppCompatActivity {
 
     DatePickerDialog picker;
     EditText eText;
-    Button btnGet;
-    TextView txtview;
+    /*Button btnGetDate;
+    TextView txtview;*/
 
     TimePickerDialog pickerheure;
     EditText eTextheure;
-    Button btnGetheure;
-    TextView txtviewheure;
+    /*Button btnGetheure;
+    TextView txtviewheure;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_rendez_vous);
-        txtview=(TextView)findViewById(R.id.textView1);
+        //txtview=(TextView)findViewById(R.id.textView1);
         eText=(EditText) findViewById(R.id.editText1);
         eText.setInputType(InputType.TYPE_NULL);
 
@@ -52,17 +52,18 @@ public class DateTimeActivity extends AppCompatActivity {
                 picker.show();
             }
         });
-        btnGet=(Button)findViewById(R.id.button1);
-        btnGet.setOnClickListener(new View.OnClickListener() {
+        /*btnGetDate=(Button)findViewById(R.id.button1);
+        btnGetDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 txtview.setText("Date choisie: "+ eText.getText());
             }
-        });
+        });*/
 
         /*===============================  Heure  ==================================*/
 
-        txtviewheure=(TextView)findViewById(R.id.textHeureView1);
+        //txtviewheure=(TextView)findViewById(R.id.textHeureView1);
         eTextheure=(EditText) findViewById(R.id.editHeureText1);
         eTextheure.setInputType(InputType.TYPE_NULL);
 
@@ -83,13 +84,13 @@ public class DateTimeActivity extends AppCompatActivity {
                 pickerheure.show();
             }
         });
-        btnGetheure=(Button)findViewById(R.id.buttonHeure1);
+        /*btnGetheure=(Button)findViewById(R.id.buttonHeure1);
         btnGetheure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 txtviewheure.setText("Heure choisie: "+ eTextheure.getText());
             }
-        });
+        });*/
     }
 
 }

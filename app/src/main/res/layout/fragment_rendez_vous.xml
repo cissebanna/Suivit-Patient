@@ -31,41 +31,23 @@
 
         </EditText>
 
+<!--===========================Date===============================-->
         <EditText
-            android:id="@+id/txtdate"
+            android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/date"
             android:ems="20"
             android:inputType="date" />
-
-        <EditText
-            android:id="@+id/txttime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/time"
-            android:ems="20"
-            android:inputType="time" />
-<!--===========================Date===============================-->
-   <!--     <?xml version="1.0" encoding="utf-8"?>
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent" android:layout_height="match_parent">-->
-            <EditText
-                android:id="@+id/editText1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="150dp"
-                android:ems="10"
-                android:hint="Enter Date" />
-            <Button
+            <!--permet dafficher la date saisie <Button
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/editText1"
                 android:layout_marginLeft="100dp"
-                android:text="Get Date" />
-            <TextView
+                android:text="Get Date" />-->
+
+            <!--afficher la date selectionner <TextView
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,27 +55,27 @@
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
-                android:textSize="18dp"/>
+                android:textSize="18dp"/>-->
        <!-- </RelativeLayout><?xml version="1.0" encoding="utf-8"?>-->
 
 <!--=======================================fin date=================================-->
  <!--===================================Heure=====================================-->
         <EditText
             android:id="@+id/editHeureText1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="150dp"
-            android:ems="10"
-            android:hint="Enter Time" />
-        <Button
+            android:hint="@string/time"
+            android:ems="20"
+            android:inputType="time"  />
+        <!--<Button
             android:id="@+id/buttonHeure1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/editHeureText1"
             android:layout_marginLeft="100dp"
-            android:text="Get heure" />
-        <TextView
+            android:text="Get heure" />-->
+
+        <!--<TextView
             android:id="@+id/textHeureView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -101,7 +83,7 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="10dp"
             android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:textSize="18dp"/>-->
 <!--===============================Fin heure ============================-->
 
         <TextView
