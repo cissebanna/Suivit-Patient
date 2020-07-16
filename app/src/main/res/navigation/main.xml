@@ -15,11 +15,17 @@
         android:name="com.example.patient.ConsultationFragment"
         android:label="@string/consultation"
         tools:layout="@layout/fragment_consultation" />
-    <fragment
+    <!--<fragment
         android:id="@+id/menuAppointment"
         android:name="com.example.patient.RendezVousFragment"
         android:label="@string/appointment"
-        tools:layout="@layout/fragment_rendez_vous" />
+        tools:layout="@layout/fragment_rendez_vous" />-->
+    <activity
+        android:id="@+id/menuAppointment"
+        android:name="com.example.patient.DateTimeActivity"
+        android:label="@string/appointment"
+        tools:layout="@layout/fragment_rendez_vous"
+        />
     <fragment
         android:id="@+id/menuHome"
         android:name="com.example.patient.HomeFragment"
