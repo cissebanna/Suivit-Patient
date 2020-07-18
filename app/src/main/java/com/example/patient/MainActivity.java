@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //changer la couleur des icones
+
         NavigationView navigationView = findViewById(R.id.navigationView);
         navigationView.setItemIconTintList(null);
 
@@ -49,12 +49,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        //action sur le button localisation
-        FragmentTransaction fragmentTransaction =  getSupportFragmentManager().beginTransaction();
-
-        fragmentTransaction.add(R.id.navHostFragment , new ProfilFragment());
-
-        fragmentTransaction.commit();
     }
 }

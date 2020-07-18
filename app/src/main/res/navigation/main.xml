@@ -5,11 +5,11 @@
     android:id="@+id/main"
     app:startDestination="@id/menuHome">
 
-    <fragment
+    <activity
         android:id="@+id/menuProfil"
-        android:name="com.example.patient.ProfilFragment"
+        android:name="com.example.patient.ConnexionActivity"
         android:label="@string/profil"
-        tools:layout="@layout/fragment_profil" />
+        tools:layout="@layout/activity_connexion" />
     <fragment
         android:id="@+id/menuConsultation"
         android:name="com.example.patient.ConsultationFragment"

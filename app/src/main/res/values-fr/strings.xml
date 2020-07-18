@@ -47,5 +47,7 @@
     <string name="maladie">Maladie</string>
     <string name="detail_maladie">Description de la maladie</string>
     <string name="title_activity_maptest">Maps</string>
+    <string name="male">male</string>
+    <string name="sexe">Sexe</string>
 
 </resources>

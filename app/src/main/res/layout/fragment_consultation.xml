@@ -56,7 +56,7 @@
         </EditText>
 
         <Button
-            android:background="@color/colorBlueAccent"
+            android:background="@color/colorBlueDark"
             android:id="@+id/btnSave"
             android:text="@string/save"
             android:layout_marginTop="@dimen/size_top"

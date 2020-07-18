@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/size_all"
+    tools:context=".InscriptionActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="@dimen/size_title"
+            android:gravity="center"
+            android:text="@string/inscription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtFirstName"
+            android:layout_marginTop="@dimen/size_top"
+            android:hint="@string/first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtLastName"
+            android:layout_marginTop="@dimen/size_top"
+            android:hint="@string/last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtAdresse"
+            android:layout_marginTop="@dimen/size_top"
+            android:hint="@string/adresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </EditText>
+
+        <EditText
+            android:id="@+id/txtTelephone"
+            android:layout_marginTop="@dimen/size_top"
+            android:hint="@string/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            >
+        </EditText>
+
+        <TextView
+            android:layout_marginTop="@dimen/size_top"
+            android:textSize="@dimen/size_top"
+            android:text="@string/sexe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/cbFemale"
+            android:layout_marginLeft="@dimen/size_middle"
+            android:layout_marginTop="@dimen/size_top"
+            android:text="@string/female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </CheckBox>
+
+        <CheckBox
+            android:id="@+id/cbMale"
+            android:layout_marginLeft="@dimen/size_middle"
+            android:layout_marginTop="@dimen/size_top"
+            android:text="@string/male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </CheckBox>
+
+        <EditText
+            android:id="@+id/txtLogin"
+            android:layout_marginTop="@dimen/size_top"
+            android:hint="@string/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        </EditText>
+
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/txtPassword"
+            android:layout_marginTop="@dimen/size_top"
+            android:hint="@string/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        </EditText>
+
+        <Button
+            android:background="@color/colorBluePrimary"
+            android:id="@+id/btnSaveuser"
+            android:layout_marginTop="@dimen/size_top"
+            android:text="@string/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </Button>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -67,4 +67,7 @@
 
 
     <string name="pick_time">pick_time</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="sexe">Sexe</string>
 </resources>
