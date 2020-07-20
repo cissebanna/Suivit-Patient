@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -30,7 +29,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class DateTimeActivity extends AppCompatActivity {
+public class RendezVousActivity extends AppCompatActivity {
     private EditText txtTel;
     private CheckBox cbControle, cbVisite;
     private String txttel;
@@ -63,7 +62,7 @@ public class DateTimeActivity extends AppCompatActivity {
                 int month = cldr.get(Calendar.MONTH);
                 int year = cldr.get(Calendar.YEAR);
                 // date picker dialog
-                picker = new DatePickerDialog(DateTimeActivity.this,
+                picker = new DatePickerDialog(RendezVousActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
@@ -84,7 +83,6 @@ public class DateTimeActivity extends AppCompatActivity {
 
         /*===============================  Heure  ==================================*/
 
-        //txtviewheure=(TextView)findViewById(R.id.textHeureView1);
         eTextheure=(EditText) findViewById(R.id.editHeureText1);
         eTextheure.setInputType(InputType.TYPE_NULL);
 
@@ -95,7 +93,7 @@ public class DateTimeActivity extends AppCompatActivity {
                 int hour = cldr.get(Calendar.HOUR_OF_DAY);
                 int minutes = cldr.get(Calendar.MINUTE);
                 // time picker dialog
-                pickerheure = new TimePickerDialog(DateTimeActivity.this,
+                pickerheure = new TimePickerDialog(RendezVousActivity.this,
                         new TimePickerDialog.OnTimeSetListener() {
 
                             @Override
@@ -139,20 +137,32 @@ public class DateTimeActivity extends AppCompatActivity {
                 if(txttel.isEmpty() || editTextHeure.equals("") || editTextDate.equals("") || motif.isEmpty())
                 {
                     String error = getString(R.string.error_fields);
-                    Toast.makeText(DateTimeActivity.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RendezVousActivity.this, error, Toast.LENGTH_SHORT).show();
                 }
                 else {
                     insertionRDV(txttel, editTextDate, editTextHeure, motif);
-                    //Toast.makeText(InscriptionActivity.this, "bien clique", Toast.LENGTH_SHORT).show();
+
+                    //vider les champs
+                    champs();
                 }
             }
         });
     }
 
+    public void champs()
+    {
+        eText.setText("");
+        eTextheure.setText("");
+        txtTel.setText("");
+        cbControle.setChecked(false);
+        cbVisite.setChecked(false);
+    }
+
+
     public void insertionRDV(String tel, Date editTextDate, Time editTextHeure, String motif){
 
         try {
-            String url ="http://192.168.1.7/devmobile/rendezVous.php";
+            String url ="http://192.168.1.8/devmobile/rendezVous.php";
 
             OkHttpClient client =new OkHttpClient();
             RequestBody body = new FormBody.Builder()
@@ -175,7 +185,7 @@ public class DateTimeActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             String error = getString(R.string.error_connection);
-                            Toast.makeText(DateTimeActivity.this, error, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RendezVousActivity.this, error, Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -195,7 +205,7 @@ public class DateTimeActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     String message= getString(R.string.error_parameters);
-                                    Toast.makeText(DateTimeActivity.this, message, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RendezVousActivity.this, message, Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }
@@ -205,7 +215,7 @@ public class DateTimeActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     String message= getString(R.string.success_save);
-                                    Toast.makeText(DateTimeActivity.this, message, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RendezVousActivity.this, message, Toast.LENGTH_SHORT).show();
                                 }
                             });
 

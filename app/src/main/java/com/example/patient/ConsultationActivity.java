@@ -90,16 +90,27 @@ public class ConsultationActivity extends AppCompatActivity {
                 }
                 else {
                     insertionConsultation(tel, editTextDate, maladie, description);
-                    //Toast.makeText(InscriptionActivity.this, "bien clique", Toast.LENGTH_SHORT).show();
+
+                    //vider les champs
+                    champs();
+
                 }
             }
         });
     }
 
+    public void champs()
+    {
+        txtdescription.setText("");
+        txtmalad.setText("");
+        txtTel.setText("");
+        eTextDate.setText("");
+    }
+
     public void insertionConsultation(String tel, Date editTextDate, String maladie, String description){
 
         try {
-            String url ="http://192.168.1.7/devmobile/consultation.php";
+            String url ="http://192.168.1.8/devmobile/consultation.php";
 
             OkHttpClient client =new OkHttpClient();
             RequestBody body = new FormBody.Builder()
@@ -153,6 +164,7 @@ public class ConsultationActivity extends AppCompatActivity {
                                 public void run() {
                                     String message= getString(R.string.success_save);
                                     Toast.makeText(ConsultationActivity.this, message, Toast.LENGTH_SHORT).show();
+
                                 }
                             });
 

@@ -26,10 +26,6 @@
         <menu>
 
             <item
-                android:id="@+id/menuSettings"
-                android:title="@string/action_settings"
-                android:icon="@drawable/settings" />
-            <item
                 android:id="@+id/menuLocalisation"
                 android:title="@string/localisation"
                 android:icon="@drawable/gps" />
@@ -38,6 +34,11 @@
                 android:id="@+id/menuHelp"
                 android:title="@string/help"
                 android:icon="@drawable/help" />
+
+            <item
+                android:id="@+id/menuSettings"
+                android:title="@string/action_settings"
+                android:icon="@drawable/settings" />
 
         </menu>
     </item>

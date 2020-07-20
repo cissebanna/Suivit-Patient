@@ -5,11 +5,11 @@
     android:id="@+id/main"
     app:startDestination="@id/menuHome">
 
-    <activity
+    <fragment
         android:id="@+id/menuProfil"
-        android:name="com.example.patient.ConnexionActivity"
+        android:name="com.example.patient.ProfilFragment"
         android:label="@string/profil"
-        tools:layout="@layout/activity_connexion" />
+        tools:layout="@layout/fragment_profil" />
     <activity
         android:id="@+id/menuConsultation"
         android:name="com.example.patient.ConsultationActivity"
@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_rendez_vous" />-->
     <activity
         android:id="@+id/menuAppointment"
-        android:name="com.example.patient.DateTimeActivity"
+        android:name="com.example.patient.RendezVousActivity"
         android:label="@string/appointment"
         tools:layout="@layout/fragment_rendez_vous"
         />
