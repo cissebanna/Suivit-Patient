@@ -22,12 +22,12 @@
         </TextView>
 
         <EditText
-            android:id="@+id/txtemail"
+            android:id="@+id/txtTel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email"
-            android:ems="20"
-            android:inputType="textEmailAddress">
+            android:hint="@string/phone"
+            android:ems="20">
+            
 
         </EditText>
 
@@ -97,7 +97,7 @@
         </TextView>
 
         <CheckBox
-            android:id="@+id/cb"
+            android:id="@+id/cbVisite"
             android:textStyle="italic"
             android:layout_marginLeft="@dimen/size_middle"
             android:layout_marginTop="@dimen/size_top"
@@ -108,7 +108,7 @@
         </CheckBox>
 
         <CheckBox
-            android:id="@+id/cbMaster"
+            android:id="@+id/cbControle"
             android:textStyle="italic"
             android:layout_marginLeft="@dimen/size_middle"
             android:layout_marginTop="@dimen/size_top"

@@ -1,7 +1,5 @@
 package com.example.patient;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,10 +7,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import org.json.JSONObject;
 
 import java.io.IOException;
-
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
@@ -91,13 +90,13 @@ public class InscriptionActivity extends AppCompatActivity {
     public void inscription(String login, String password, String firstName, String lastName, String adresse, String phone, String sexe){
 
         try {
-            String url ="http://192.168.1.8/devmobile/inscription.php";
+            String url ="http://192.168.1.7/devmobile/inscription.php";
 
             OkHttpClient client =new OkHttpClient();
             RequestBody body = new FormBody.Builder()
-                    .add("login", login)
-                    .add("password", password)
-                    .add("first_name", firstName)
+                    .add("email", login)
+                    .add("dateRdv", password)
+                    .add("heureRdv", firstName)
                     .add("last_name", lastName)
                     .add("adresse", adresse)
                     .add("tel", phone)
