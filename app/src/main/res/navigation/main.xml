@@ -10,9 +10,9 @@
         android:name="com.example.patient.ConnexionActivity"
         android:label="@string/profil"
         tools:layout="@layout/activity_connexion" />
-    <fragment
+    <activity
         android:id="@+id/menuConsultation"
-        android:name="com.example.patient.ConsultationFragment"
+        android:name="com.example.patient.ConsultationActivity"
         android:label="@string/consultation"
         tools:layout="@layout/fragment_consultation" />
     <!--<fragment

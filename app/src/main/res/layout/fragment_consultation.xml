@@ -21,12 +21,11 @@
         </TextView>
 
         <EditText
-            android:id="@+id/txtmatricule"
+            android:id="@+id/txttel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/matricule"
+            android:hint="@string/phone"
             android:ems="20">
-
         </EditText>
 
         <EditText
@@ -48,12 +47,12 @@
             android:inputType="textMultiLine" />
 
         <EditText
+            android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/date"
-            android:ems="20">
-
-        </EditText>
+            android:ems="20"
+            android:inputType="date" />
 
         <Button
             android:background="@color/colorBlueDark"
