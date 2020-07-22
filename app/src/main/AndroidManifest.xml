@@ -17,10 +17,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ConsultationActivity"></activity>
+        <activity android:name=".AfficherConsultationActivity"></activity>
+        <activity android:name=".ListeConsultationActivity" />
+        <activity android:name=".AfficheRendezVousActivity" />
+        <activity android:name=".ListeRendezVousActivity" />
+        <activity android:name=".ConsultationActivity" />
         <activity android:name=".InscriptionActivity" />
         <activity android:name=".ConnexionActivity" />
-        <activity android:name=".DateTimeActivity" />
+        <activity android:name=".RendezVousActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

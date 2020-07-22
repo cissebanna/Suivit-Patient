@@ -3,18 +3,22 @@ package com.example.patient;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.sql.Time;
 import java.util.Calendar;
 
 import okhttp3.Call;
@@ -25,25 +29,32 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class ConsultationActivity extends AppCompatActivity {
+public class RendezVousActivity extends AppCompatActivity {
+    private EditText txtTel;
+    private CheckBox cbControle, cbVisite;
+    private String txttel;
+    private String motif;
+    private Date editTextDate;
+    private Time editTextHeure;
 
     DatePickerDialog picker;
-    EditText eTextDate ,txtTel,txtmalad,txtdescription ;
-    Date editTextDate;
-
-    String tel,description,maladie;
+    EditText eText;
     /*Button btnGetDate;
     TextView txtview;*/
 
+    TimePickerDialog pickerheure;
+    EditText eTextheure;
+    /*Button btnGetheure;
+    TextView txtviewheure;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_consultation);
-        eTextDate=(EditText) findViewById(R.id.editText1);
-        eTextDate.setInputType(InputType.TYPE_NULL);
+        setContentView(R.layout.fragment_rendez_vous);
+        //txtview=(TextView)findViewById(R.id.textView1);
+        eText=(EditText) findViewById(R.id.editText1);
+        eText.setInputType(InputType.TYPE_NULL);
 
-        eTextDate.setOnClickListener(new View.OnClickListener() {
+        eText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Calendar cldr = Calendar.getInstance();
@@ -51,11 +62,11 @@ public class ConsultationActivity extends AppCompatActivity {
                 int month = cldr.get(Calendar.MONTH);
                 int year = cldr.get(Calendar.YEAR);
                 // date picker dialog
-                picker = new DatePickerDialog(ConsultationActivity.this,
+                picker = new DatePickerDialog(RendezVousActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                                eTextDate.setText(  year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                                eText.setText(  year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
                             }
                         }, year, month, day);
                 picker.show();
@@ -69,43 +80,84 @@ public class ConsultationActivity extends AppCompatActivity {
                 txtview.setText("Date choisie: "+ eText.getText());
             }
         });*/
-        txtTel = findViewById(R.id.txttel);
-        txtmalad = findViewById(R.id.txtmaladie);
-        txtdescription = findViewById(R.id.detail);
+
+        /*===============================  Heure  ==================================*/
+
+        //txtviewheure=(TextView)findViewById(R.id.textHeureView1);
+        eTextheure=(EditText) findViewById(R.id.editHeureText1);
+        eTextheure.setInputType(InputType.TYPE_NULL);
+
+        eTextheure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar cldr = Calendar.getInstance();
+                int hour = cldr.get(Calendar.HOUR_OF_DAY);
+                int minutes = cldr.get(Calendar.MINUTE);
+                // time picker dialog
+                pickerheure = new TimePickerDialog(RendezVousActivity.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+
+                            @Override
+                            public void onTimeSet(TimePicker tp, int sHour, int sMinute) {
+                                eTextheure.setText(sHour + ":" + sMinute + ":00");
+                            }
+                        }, hour, minutes, true);
+                pickerheure.show();
+            }
+        });
+        /*btnGetheure=(Button)findViewById(R.id.buttonHeure1);
+        btnGetheure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtviewheure.setText("Heure choisie: "+ eTextheure.getText());
+            }
+        });*/
+
+        txtTel = findViewById(R.id.txtTel);
+        cbControle = findViewById(R.id.cbControle);
+        cbVisite = findViewById(R.id.cbVisite);
         Button btnSave = findViewById(R.id.btnSave);
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                tel = txtTel.getText().toString().trim();
-                editTextDate = Date.valueOf(eTextDate.getText().toString().trim());
-                description= txtdescription.getText().toString().trim();
-                maladie = txtmalad.getText().toString().trim();
+                txttel = txtTel.getText().toString().trim();
+                editTextDate = Date.valueOf(eText.getText().toString().trim());
+                editTextHeure = Time.valueOf(eTextheure.getText().toString().trim());
+                motif = "";
+                if(cbControle.isChecked())
+                {
+                    motif+=cbControle.getText().toString().trim()+" ";
+                }
+                if(cbVisite.isChecked())
+                {
+                    motif+=cbVisite.getText().toString().trim()+" ";
+                }
 
-                if(tel.isEmpty() || editTextDate.equals("") || maladie.isEmpty() || description.isEmpty())
+                if(txttel.isEmpty() || editTextHeure.equals("") || editTextDate.equals("") || motif.isEmpty())
                 {
                     String error = getString(R.string.error_fields);
-                    Toast.makeText(ConsultationActivity.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RendezVousActivity.this, error, Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    insertionConsultation(tel, editTextDate, maladie, description);
+                    insertionRDV(txttel, editTextDate, editTextHeure, motif);
                     //Toast.makeText(InscriptionActivity.this, "bien clique", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
-    public void insertionConsultation(String tel, Date editTextDate, String maladie, String description){
+    public void insertionRDV(String tel, Date editTextDate, Time editTextHeure, String motif){
 
         try {
-            String url ="http://192.168.1.4/devmobile/consultation.php";
+            String url ="http://192.168.1.4/devmobile/rendezVous.php";
 
             OkHttpClient client =new OkHttpClient();
             RequestBody body = new FormBody.Builder()
-                    .add("diagnostic", maladie)
-                    .add("date", String.valueOf(editTextDate))
-                    .add("description", description)
+                    .add("motif", motif)
+                    .add("dateRdv", String.valueOf(editTextDate))
+                    .add("heureRdv", String.valueOf(editTextHeure))
                     .add("tel", tel)
                     .build();
             Request request = new Request.Builder()
@@ -122,7 +174,7 @@ public class ConsultationActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             String error = getString(R.string.error_connection);
-                            Toast.makeText(ConsultationActivity.this, error, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RendezVousActivity.this, error, Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -142,7 +194,7 @@ public class ConsultationActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     String message= getString(R.string.error_parameters);
-                                    Toast.makeText(ConsultationActivity.this, message, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RendezVousActivity.this, message, Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }
@@ -152,7 +204,7 @@ public class ConsultationActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     String message= getString(R.string.success_save);
-                                    Toast.makeText(ConsultationActivity.this, message, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RendezVousActivity.this, message, Toast.LENGTH_SHORT).show();
                                 }
                             });
 
@@ -170,4 +222,5 @@ public class ConsultationActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 }

@@ -70,4 +70,6 @@
     <string name="male">male</string>
     <string name="female">female</string>
     <string name="sexe">Sexe</string>
+    <string name="description">Description</string>
+    <string name="diagnostic">Diagnostique</string>
 </resources>

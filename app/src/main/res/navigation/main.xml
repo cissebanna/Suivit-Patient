@@ -10,11 +10,17 @@
         android:name="com.example.patient.ConnexionActivity"
         android:label="@string/profil"
         tools:layout="@layout/activity_connexion" />
-    <activity
+    <!--<activity
         android:id="@+id/menuConsultation"
         android:name="com.example.patient.ConsultationActivity"
         android:label="@string/consultation"
-        tools:layout="@layout/fragment_consultation" />
+        tools:layout="@layout/fragment_consultation" />-->
+
+    <activity
+        android:id="@+id/menuConsultation"
+        android:name="com.example.patient.AfficherConsultationActivity"
+        android:label="@string/consultation"
+        tools:layout="@layout/activity_afficher_consultation" />
     <!--<fragment
         android:id="@+id/menuAppointment"
         android:name="com.example.patient.RendezVousFragment"
@@ -22,9 +28,9 @@
         tools:layout="@layout/fragment_rendez_vous" />-->
     <activity
         android:id="@+id/menuAppointment"
-        android:name="com.example.patient.DateTimeActivity"
+        android:name="com.example.patient.AfficheRendezVousActivity"
         android:label="@string/appointment"
-        tools:layout="@layout/fragment_rendez_vous"
+        tools:layout="@layout/activity_affiche_rendez_vous"
         />
     <fragment
         android:id="@+id/menuHome"
