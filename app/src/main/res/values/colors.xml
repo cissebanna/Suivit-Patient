@@ -8,6 +8,7 @@
     <color name="colorBluePrimary">#37acef</color>
     <color name="colorBlueDark">#6200EE</color>
     <color name="orange">#ff5500</color>
+    <color name="colorAccentRouge">#FF5252</color>
     <color name="white">#ffffff</color>
     <color name="transparent">#00000000</color>
     <color name="date_color">#999999</color>

@@ -71,4 +71,8 @@ Il est situé dans le sud-ouest de la capitale, dans le quartier de Fann Réside
     <string name="male">male</string>
     <string name="female">female</string>
     <string name="sexe">Sexe</string>
+    <string name="description">Description</string>
+    <string name="diagnostic">Diagnostique</string>
+    <string name="Consulter">Consulter</string>
+    <string name="nouveau">Nouveau</string>
 </resources>

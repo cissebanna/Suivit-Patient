@@ -83,6 +83,10 @@ public class RendezVousActivity extends AppCompatActivity {
 
         /*===============================  Heure  ==================================*/
 
+<<<<<<< HEAD
+=======
+        //txtviewheure=(TextView)findViewById(R.id.textHeureView1);
+>>>>>>> d2861d3582d4d9dc5b26247ce1fec65647241528
         eTextheure=(EditText) findViewById(R.id.editHeureText1);
         eTextheure.setInputType(InputType.TYPE_NULL);
 
@@ -141,14 +145,19 @@ public class RendezVousActivity extends AppCompatActivity {
                 }
                 else {
                     insertionRDV(txttel, editTextDate, editTextHeure, motif);
+<<<<<<< HEAD
 
                     //vider les champs
                     champs();
+=======
+                    //Toast.makeText(InscriptionActivity.this, "bien clique", Toast.LENGTH_SHORT).show();
+>>>>>>> d2861d3582d4d9dc5b26247ce1fec65647241528
                 }
             }
         });
     }
 
+<<<<<<< HEAD
     public void champs()
     {
         eText.setText("");
@@ -162,7 +171,19 @@ public class RendezVousActivity extends AppCompatActivity {
     public void insertionRDV(String tel, Date editTextDate, Time editTextHeure, String motif){
 
         try {
+<<<<<<<< HEAD:app/src/main/java/com/example/patient/RendezVousActivity.java
             String url ="http://192.168.1.8/devmobile/rendezVous.php";
+========
+            UrlBase path =new UrlBase();
+            String url =path.url+"/rendezVous.php";
+>>>>>>>> d2861d3582d4d9dc5b26247ce1fec65647241528:app/src/main/java/com/example/patient/DateTimeActivity.java
+=======
+    public void insertionRDV(String tel, Date editTextDate, Time editTextHeure, String motif){
+
+        try {
+            UrlBase path =new UrlBase();
+            String url =path.url+"/rendezVous.php";
+>>>>>>> d2861d3582d4d9dc5b26247ce1fec65647241528
 
             OkHttpClient client =new OkHttpClient();
             RequestBody body = new FormBody.Builder()

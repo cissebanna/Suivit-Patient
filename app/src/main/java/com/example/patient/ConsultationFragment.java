@@ -1,11 +1,15 @@
 package com.example.patient;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import android.text.InputType;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -15,6 +19,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.sql.Time;
 import java.util.Calendar;
 
 import okhttp3.Call;
@@ -25,7 +30,11 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class ConsultationActivity extends AppCompatActivity {
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class ConsultationFragment extends AppCompatActivity {
 
     DatePickerDialog picker;
     EditText eTextDate ,txtTel,txtmalad,txtdescription ;
@@ -37,9 +46,9 @@ public class ConsultationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_consultation);
+
         eTextDate=(EditText) findViewById(R.id.editText1);
         eTextDate.setInputType(InputType.TYPE_NULL);
 
@@ -51,7 +60,7 @@ public class ConsultationActivity extends AppCompatActivity {
                 int month = cldr.get(Calendar.MONTH);
                 int year = cldr.get(Calendar.YEAR);
                 // date picker dialog
-                picker = new DatePickerDialog(ConsultationActivity.this,
+                picker = new DatePickerDialog(ConsultationFragment.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
@@ -69,7 +78,7 @@ public class ConsultationActivity extends AppCompatActivity {
                 txtview.setText("Date choisie: "+ eText.getText());
             }
         });*/
-        txtTel = findViewById(R.id.txttel);
+        txtTel = findViewById(R.id.txtTel);
         txtmalad = findViewById(R.id.txtmaladie);
         txtdescription = findViewById(R.id.detail);
         Button btnSave = findViewById(R.id.btnSave);
@@ -86,36 +95,21 @@ public class ConsultationActivity extends AppCompatActivity {
                 if(tel.isEmpty() || editTextDate.equals("") || maladie.isEmpty() || description.isEmpty())
                 {
                     String error = getString(R.string.error_fields);
-                    Toast.makeText(ConsultationActivity.this, error, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ConsultationFragment.this, error, Toast.LENGTH_SHORT).show();
                 }
                 else {
                     insertionConsultation(tel, editTextDate, maladie, description);
-
-                    //vider les champs
-                    champs();
-
+                    //Toast.makeText(InscriptionActivity.this, "bien clique", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
-    public void champs()
-    {
-        txtdescription.setText("");
-        txtmalad.setText("");
-        txtTel.setText("");
-        eTextDate.setText("");
-    }
-
     public void insertionConsultation(String tel, Date editTextDate, String maladie, String description){
 
         try {
-<<<<<<< HEAD
-            String url ="http://192.168.1.8/devmobile/consultation.php";
-=======
             UrlBase path =new UrlBase();
             String url =path.url+"/consultation.php";
->>>>>>> d2861d3582d4d9dc5b26247ce1fec65647241528
 
             OkHttpClient client =new OkHttpClient();
             RequestBody body = new FormBody.Builder()
@@ -138,7 +132,7 @@ public class ConsultationActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             String error = getString(R.string.error_connection);
-                            Toast.makeText(ConsultationActivity.this, error, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ConsultationFragment.this, error, Toast.LENGTH_SHORT).show();
 
                         }
                     });
@@ -158,7 +152,7 @@ public class ConsultationActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     String message= getString(R.string.error_parameters);
-                                    Toast.makeText(ConsultationActivity.this, message, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ConsultationFragment.this, message, Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }
@@ -168,8 +162,7 @@ public class ConsultationActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     String message= getString(R.string.success_save);
-                                    Toast.makeText(ConsultationActivity.this, message, Toast.LENGTH_SHORT).show();
-
+                                    Toast.makeText(ConsultationFragment.this, message, Toast.LENGTH_SHORT).show();
                                 }
                             });
 
