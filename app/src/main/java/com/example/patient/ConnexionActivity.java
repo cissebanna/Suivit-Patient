@@ -69,7 +69,8 @@ public class ConnexionActivity extends AppCompatActivity {
 
         try {
 
-            String url ="http://192.168.1.4/devmobile/connexion.php?login="+login+"&password="+password;
+            UrlBase path =new UrlBase();
+            String url =path.url+"/connexion.php?login="+login+"&password="+password;
 
 
             OkHttpClient client = new OkHttpClient();

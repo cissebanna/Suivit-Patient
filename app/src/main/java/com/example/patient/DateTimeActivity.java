@@ -152,7 +152,8 @@ public class DateTimeActivity extends AppCompatActivity {
     public void insertionRDV(String tel, Date editTextDate, Time editTextHeure, String motif){
 
         try {
-            String url ="http://192.168.1.7/devmobile/rendezVous.php";
+            UrlBase path =new UrlBase();
+            String url =path.url+"/rendezVous.php";
 
             OkHttpClient client =new OkHttpClient();
             RequestBody body = new FormBody.Builder()

@@ -2,8 +2,11 @@ package com.example.patient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -30,7 +33,7 @@ public class AfficheRendezVousActivity extends AppCompatActivity {
     String ligne =null;
     String result=null;
 
-
+    private Button btnAddRdv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,14 +47,25 @@ public class AfficheRendezVousActivity extends AppCompatActivity {
         ListeRendezVousActivity  listViewRDV = new ListeRendezVousActivity(this, id, patient, motif, date,  heure ,first_name,last_name);
         listViewRendezVous.setAdapter(listViewRDV);
         listViewRDV.notifyDataSetChanged();
+
+        btnAddRdv =(Button) findViewById(R.id.btnAjoutRdv);
+        btnAddRdv.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AfficheRendezVousActivity.this, RendezVousActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     // Collect rdv data function
     private void recupDonneesRendezVous() {
         //Connection
         try {
-            String urladdress = "http://192.168.1.4/devmobile/liste_rendez_vous.php";
-            URL url = new URL(urladdress);
+            UrlBase path =new UrlBase();
+            String uri =path.url+"/liste_rendez_vous.php";
+            URL url = new URL(uri);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
             is = new BufferedInputStream(con.getInputStream());

@@ -16,4 +16,17 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp" />
 
+    <Button
+        android:id="@+id/btnAjoutRdv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nouveau"
+        android:background="@color/colorAccent"
+        android:layout_alignBottom="@id/lviewRendezVous"
+        app:layout_anchor="@id/lviewRendezVous"
+        android:layout_alignEnd="@id/lviewRendezVous"
+        android:layout_alignRight="@id/lviewRendezVous">
+
+    </Button>
+
 </RelativeLayout>

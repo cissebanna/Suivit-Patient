@@ -6,14 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".AfficherConsultationActivity">
 
+
     // Listview pour nos consultation
-    <ListView
-        android:id="@+id/listeViewConsultation"
-        android:layout_width="match_parent"
-        android:layout_height="620dp"
-        android:padding="10dp"
-        android:background="#F0F0F0"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
+        <ListView
+            android:id="@+id/listeViewConsultation"
+            android:layout_width="match_parent"
+            android:layout_height="620dp"
+            android:padding="10dp"
+            android:background="#F0F0F0"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+    <Button
+        android:id="@+id/btnAjoutConsultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Consulter"
+        android:background="@color/colorBlueAccent"
+        android:layout_alignBottom="@id/listeViewConsultation"
+        app:layout_anchor="@id/listeViewConsultation"
+        android:layout_alignEnd="@id/listeViewConsultation"
+        android:layout_alignRight="@id/listeViewConsultation">
+
+    </Button>
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAjoutConsultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/colorAccentRouge"
+        app:tint="@color/colorWhite"
+        app:maxImageSize="35dp"
+        android:layout_alignBottom="@id/listeViewConsultation"
+        android:layout_alignEnd="@id/listeViewConsultation"
+        app:layout_anchor="@id/listeViewConsultation"
+        android:layout_alignRight="@id/listeViewConsultation">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>-->
 
 </RelativeLayout>

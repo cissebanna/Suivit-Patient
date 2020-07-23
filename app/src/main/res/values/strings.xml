@@ -72,4 +72,6 @@
     <string name="sexe">Sexe</string>
     <string name="description">Description</string>
     <string name="diagnostic">Diagnostique</string>
+    <string name="Consulter">Consulter</string>
+    <string name="nouveau">Nouveau</string>
 </resources>

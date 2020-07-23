@@ -21,6 +21,10 @@ android {
         }
     }
 
+    dependencies {
+        //Material design
+        implementation 'com.google.android.material:material:1.2.0-alpha02'
+    }
 }
 
 dependencies {

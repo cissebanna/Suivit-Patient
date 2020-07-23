@@ -2,8 +2,11 @@ package com.example.patient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -30,6 +33,8 @@ public class AfficherConsultationActivity extends AppCompatActivity {
     String ligne =null;
     String result=null;
 
+    private Button btnAddConsultation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,14 +48,26 @@ public class AfficherConsultationActivity extends AppCompatActivity {
         ListeRendezVousActivity  listViewCons = new ListeRendezVousActivity(this, id, patient, diagnostic, date, description ,first_name,last_name);
         listViewConsultation.setAdapter(listViewCons);
         listViewCons.notifyDataSetChanged();
+
+        btnAddConsultation =(Button) findViewById(R.id.btnAjoutConsultation);
+        btnAddConsultation.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AfficherConsultationActivity.this, ConsultationActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     // Collect consultation data function
     private void recupDonneesConsultation() {
         //Connection
         try {
-            String urladdress = "http://192.168.1.4/devmobile/selecteConsultation.php";
-            URL url = new URL(urladdress);
+            UrlBase path =new UrlBase();
+            String uri =path.url+"/selecteConsultation.php";
+            URL url = new URL(uri);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
             is = new BufferedInputStream(con.getInputStream());

@@ -12,7 +12,7 @@
         android:id="@+id/parent_layout_rdv"
         app:cardCornerRadius="10dp"
         android:layout_margin="2dp"
-        android:backgroundTint="@color/colorAccent"
+        android:backgroundTint="@color/colorBluePrimary"
         app:cardElevation="10dp">
 
         <RelativeLayout
