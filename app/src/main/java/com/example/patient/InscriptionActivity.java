@@ -101,12 +101,9 @@ public class InscriptionActivity extends AppCompatActivity {
     public void inscription(String login, String password, String firstName, String lastName, String adresse, String phone, String sexe){
 
         try {
-<<<<<<< HEAD
-            String url ="http://192.168.1.8/devmobile/inscription.php";
-=======
+
             UrlBase path =new UrlBase();
             String url =path.url+"/inscription.php";
->>>>>>> d2861d3582d4d9dc5b26247ce1fec65647241528
 
             OkHttpClient client =new OkHttpClient();
             RequestBody body = new FormBody.Builder()

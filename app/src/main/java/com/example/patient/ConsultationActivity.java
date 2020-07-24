@@ -110,12 +110,9 @@ public class ConsultationActivity extends AppCompatActivity {
     public void insertionConsultation(String tel, Date editTextDate, String maladie, String description){
 
         try {
-<<<<<<< HEAD
-            String url ="http://192.168.1.8/devmobile/consultation.php";
-=======
+
             UrlBase path =new UrlBase();
             String url =path.url+"/consultation.php";
->>>>>>> d2861d3582d4d9dc5b26247ce1fec65647241528
 
             OkHttpClient client =new OkHttpClient();
             RequestBody body = new FormBody.Builder()

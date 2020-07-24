@@ -9,35 +9,18 @@
         android:id="@+id/menuProfil"
         android:name="com.example.patient.ProfilFragment"
         android:label="@string/profil"
-<<<<<<< HEAD
         tools:layout="@layout/fragment_profil" />
-    <activity
-=======
-        tools:layout="@layout/activity_connexion" />
-    <!--<activity
->>>>>>> d2861d3582d4d9dc5b26247ce1fec65647241528
-        android:id="@+id/menuConsultation"
-        android:name="com.example.patient.ConsultationActivity"
-        android:label="@string/consultation"
-        tools:layout="@layout/fragment_consultation" />-->
+
 
     <activity
         android:id="@+id/menuConsultation"
         android:name="com.example.patient.AfficherConsultationActivity"
         android:label="@string/consultation"
         tools:layout="@layout/activity_afficher_consultation" />
-    <!--<fragment
-        android:id="@+id/menuAppointment"
-        android:name="com.example.patient.RendezVousFragment"
-        android:label="@string/appointment"
-        tools:layout="@layout/fragment_rendez_vous" />-->
+
     <activity
         android:id="@+id/menuAppointment"
-<<<<<<< HEAD
-        android:name="com.example.patient.RendezVousActivity"
-=======
         android:name="com.example.patient.AfficheRendezVousActivity"
->>>>>>> d2861d3582d4d9dc5b26247ce1fec65647241528
         android:label="@string/appointment"
         tools:layout="@layout/activity_affiche_rendez_vous"
         />

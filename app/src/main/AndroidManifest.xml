@@ -23,10 +23,7 @@
         <activity android:name=".ListeRendezVousActivity" />
         <activity android:name=".ConsultationActivity" />
         <activity android:name=".InscriptionActivity" />
-<<<<<<< HEAD
-=======
-        <activity android:name=".ConnexionActivity" />
->>>>>>> d2861d3582d4d9dc5b26247ce1fec65647241528
+
         <activity android:name=".RendezVousActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
