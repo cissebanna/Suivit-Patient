@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuHome">
+
+    <fragment
+        android:id="@+id/menuProfil"
+        android:name="com.example.patient.ProfilFragment"
+        android:label="@string/profil"
+        tools:layout="@layout/fragment_profil" />
+
+
+    <activity
+        android:id="@+id/menuConsultation"
+        android:name="com.example.patient.AfficherConsultationActivity"
+        android:label="@string/consultation"
+        tools:layout="@layout/activity_afficher_consultation" />
+
+    <activity
+        android:id="@+id/menuAppointment"
+        android:name="com.example.patient.AfficheRendezVousActivity"
+        android:label="@string/appointment"
+        tools:layout="@layout/activity_affiche_rendez_vous"
+        />
+    <fragment
+        android:id="@+id/menuHome"
+        android:name="com.example.patient.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/menuHelp"
+        android:name="com.example.patient.HelpFragment"
+        android:label="@string/help"
+        tools:layout="@layout/fragment_help"
+        />
+    <fragment
+        android:id="@+id/menuLocalisation"
+        android:name="com.example.patient.MapsActivity"
+        android:label="@string/localisation"
+        tools:layout="@layout/activity_maps"
+        />
+</navigation>

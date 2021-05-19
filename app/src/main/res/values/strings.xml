@@ -1,3 +1,78 @@
 <resources>
-    <string name="app_name">PATIENT</string>
+    <string name="app_name">Hopital Fann</string>
+    <string name="connection">Connection</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="connect">Connect</string>
+    <string name="sign_in">Sign_in</string>
+    <string name="appointment">Appointment</string>
+    <string name="consultation">Consultation</string>
+    <string name="help">Help</string>
+    <string name="cancel">Cancel</string>
+    <string name="inscription">Inscription</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="email">Mail</string>
+    <string name="phone">Phone</string>
+    <string name="adresse">Adresse</string>
+    <string name="save">Save</string>
+    <string name="error_fields">Required Fields</string>
+    <string name="error_parameters">Credentials error</string>
+    <string name="error_connection">Connection error</string>
+    <string name="welcome">Welcome</string>
+    <string name="wait">Please wait</string>
+    <string name="success_save">Success</string>
+    <string name="title_activity_home">Hopital fann</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Hoptial fann</string>
+    <string name="nav_header_subtitle">hopital-fann@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="home">Hopital Fann</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="localisation">Localisation</string>
+    <string name="profil">Profil</string>
+    <string name="others">Others</string>
+    <string name="home_text">Le Centre hospitalier national universitaire de Fann (CHNU) est un établissement hospitalier de Dakar (Sénégal), pionnier dans le domaine de la psychiatrie en Afrique subsaharienne, et parfois connu sous le nom de École de Fann ou École de Dakar.
+Il est situé dans le sud-ouest de la capitale, dans le quartier de Fann Résidence, sur la commune d\'arrondissement de Fann-Point E-Amitié..</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="app_email">hopital-fann@gmail.com</string>
+    <string name="title_activity_maps" translatable="false">Map</string>
+    <string name="motif">motif</string>
+    <string name="visite">visite</string>
+    <string name="control">control</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="matricule">Matricule</string>
+    <string name="maladie">Maladie</string>
+    <string name="detail_maladie">Description de la maladie</string>
+    <string name="title_activity_maptest">Maps</string>
+
+    <!-- liste maladie -->
+    <string-array name="maladie">
+        <item>Paludisme</item>
+        <item>Fievre </item>
+        <item>Tuberculoge</item>
+        <item>Corona</item>
+        <item>Diabete</item>
+        <item>Rhum</item>
+    </string-array>
+
+
+    <string name="pick_time" translatable="false">pick_time</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="sexe">Sexe</string>
+    <string name="description">Description</string>
+    <string name="diagnostic">Diagnostique</string>
+    <string name="Consulter">Consulter</string>
+    <string name="nouveau">Nouveau</string>
 </resources>

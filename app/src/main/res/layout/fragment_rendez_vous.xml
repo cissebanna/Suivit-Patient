@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rdv"
+    tools:context=".RendezVousActivity">
+
+    <LinearLayout
+        android:padding="@dimen/size_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/appointment"
+            android:textSize="30dp"
+            android:gravity="center">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/txtTel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone"
+            android:ems="20"
+            android:inputType="phone">
+            
+
+        </EditText>
+
+<!--===========================Date===============================-->
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date"
+            android:ems="20"
+            android:inputType="date" />
+            <!--permet dafficher la date saisie <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText1"
+                android:layout_marginLeft="100dp"
+                android:text="Get Date" />-->
+
+            <!--afficher la date selectionner <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button1"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="18dp"/>-->
+       <!-- </RelativeLayout><?xml version="1.0" encoding="utf-8"?>-->
+
+<!--=======================================fin date=================================-->
+ <!--===================================Heure=====================================-->
+        <EditText
+            android:id="@+id/editHeureText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/time"
+            android:ems="20"
+            android:inputType="time"  />
+        <!--<Button
+            android:id="@+id/buttonHeure1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editHeureText1"
+            android:layout_marginLeft="100dp"
+            android:text="Get heure" />-->
+
+        <!--<TextView
+            android:id="@+id/textHeureView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonHeure1"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="18dp"/>-->
+<!--===============================Fin heure ============================-->
+
+        <TextView
+            android:textColor="@color/colorBlueDark"
+            android:layout_margin="@dimen/size_all"
+            android:textSize="@dimen/size_title"
+            android:text="@string/motif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/cbVisite"
+            android:textStyle="italic"
+            android:layout_marginLeft="@dimen/size_middle"
+            android:layout_marginTop="@dimen/size_top"
+            android:text="@string/visite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+
+        <CheckBox
+            android:id="@+id/cbControle"
+            android:textStyle="italic"
+            android:layout_marginLeft="@dimen/size_middle"
+            android:layout_marginTop="@dimen/size_top"
+            android:text="@string/control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </CheckBox>
+
+        <Button
+            android:background="@color/colorBlueAccent"
+            android:id="@+id/btnSave"
+            android:text="@string/save"
+            android:layout_marginTop="@dimen/size_top"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            >
+
+        </Button>
+
+
+    </LinearLayout>
+
+</ScrollView>

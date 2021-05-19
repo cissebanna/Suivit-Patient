@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuHome"
+        android:title="@string/home"
+        android:icon="@drawable/home" />
+
+    <item
+        android:id="@+id/menuProfil"
+        android:title="@string/profil"
+        android:icon="@drawable/user" />
+
+    <item
+        android:id="@+id/menuConsultation"
+        android:title="@string/consultation"
+        android:icon="@drawable/checkup" />
+
+    <item
+        android:id="@+id/menuAppointment"
+        android:title="@string/appointment"
+        android:icon="@drawable/hospital" />
+
+
+    <item android:title="@string/others">
+        <menu>
+
+            <item
+                android:id="@+id/menuLocalisation"
+                android:title="@string/localisation"
+                android:icon="@drawable/gps" />
+
+            <item
+                android:id="@+id/menuHelp"
+                android:title="@string/help"
+                android:icon="@drawable/help" />
+
+            <item
+                android:id="@+id/menuSettings"
+                android:title="@string/action_settings"
+                android:icon="@drawable/settings" />
+
+        </menu>
+    </item>
+</menu>

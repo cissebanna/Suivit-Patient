@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Hopital Fann</string>
+    <string name="connection">Connexion</string>
+    <string name="login">Identifiant</string>
+    <string name="password">Mot de passe</string>
+    <string name="connect">Se connecter</string>
+    <string name="sign_in">S\'inscrire</string>
+    <string name="help">Aide</string>
+    <string name="cancel">Annuler</string>
+    <string name="appointment">Rendez-vous</string>
+    <string name="consultation">Consultation</string>
+    <string name="inscription">Inscription</string>
+    <string name="first_name">Prénom</string>
+    <string name="last_name">Nom</string>
+    <string name="save">Enregister</string>
+    <string name="error_fields">Champs obligatoires</string>
+    <string name="error_parameters">Identifiant ou mot de passe incorrects</string>
+    <string name="error_connection">Erreur de connexion</string>
+    <string name="welcome">Bienvenue</string>
+    <string name="email">Email</string>
+    <string name="phone">Telehone</string>
+    <string name="adresse">Adresse</string>
+    <string name="wait">Veuillez patienter SVP ...</string>
+    <string name="success_save">Enregistrement réussi</string>
+    <string name="title_activity_home">Acceuil</string>
+    <string name="navigation_drawer_open">Ouvrir navigation drawer</string>
+    <string name="navigation_drawer_close">Fermer navigation drawer</string>
+    <string name="nav_header_title">Hoptial Fann</string>
+    <string name="nav_header_subtitle">hopital-fann@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Parametres</string>
+    <string name="home">Hopital Fann</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="home_second">Home Second</string>
+    <string name="localisation">Localisation</string>
+    <string name="profil">Profil</string>
+    <string name="others">Autres</string>
+    <string name="home_text">Le Centre hospitalier national universitaire de Fann (CHNU) est un établissement hospitalier de Dakar (Sénégal), pionnier dans le domaine de la psychiatrie en Afrique subsaharienne, et parfois connu sous le nom de École de Fann ou École de Dakar.
+Il est situé dans le sud-ouest de la capitale, dans le quartier de Fann Résidence, sur la commune d\'arrondissement de Fann-Point E-Amitié..</string>
+    <string name="app_email">hopital-fann@gmail.com</string>
+    <string name="motif">motif</string>
+    <string name="visite">visite</string>
+    <string name="control">control</string>
+    <string name="date">Date</string>
+    <string name="time">Heure</string>
+    <string name="matricule">Matricule</string>
+    <string name="maladie">Maladie</string>
+    <string name="detail_maladie">Description de la maladie</string>
+    <string name="title_activity_maptest">Maps</string>
+    <string name="male">Homme</string>
+    <string name="female">Femme</string>
+    <string name="sexe">Sexe</string>
+
+</resources>

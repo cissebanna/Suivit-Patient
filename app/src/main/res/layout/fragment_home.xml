@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/size_top"
+        >
+
+        <ImageView
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_img">
+
+        </ImageView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_text"
+            android:textSize="@dimen/size_top">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/btnlocalisation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/localisation"
+            android:background="@color/colorBlueAccent">
+
+        </Button>
+
+    </LinearLayout>
+
+</ScrollView>
